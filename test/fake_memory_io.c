@@ -12,7 +12,7 @@ MEMIO_Status_t MEMIO_read(uint32_t address, void *buffer, uint32_t size) {
 
 MEMIO_Status_t MEMIO_prog(uint32_t address, const void *buffer, uint32_t size) {
   for (uint32_t i = 0; i < size; i++) {
-    fake_buffer[address + i] = ((const uint8_t *)buffer)[i];
+    fake_buffer[address + i] &= ((const uint8_t *)buffer)[i];
   }
   return MEMIO_Status_Ok;
 }
