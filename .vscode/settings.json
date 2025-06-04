@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "xaver.clang-format",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.loggingLevel": "Debug",
+    "files.associations": {
+        "file_system.h": "c",
+        "lfs.h": "c",
+        "memory_io.h": "c",
+        "fake_memory_io.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
+}
