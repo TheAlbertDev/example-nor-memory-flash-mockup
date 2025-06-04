@@ -51,6 +51,20 @@ To use it:
 | LittleFS  | v2.11.0               | [LittleFS v2.11.0](https://github.com/littlefs-project/littlefs/tree/v2.11.0)    |
 | CppUTest  | latest-passing-build  | [CppUTest latest-passing-build](https://github.com/cpputest/cpputest/tree/004af40710d24c5dd075b0b84c82598e6d4f852b) |
 
+## Dummy image generation
+
+The project uses the `littlefs-python` package to generate test images stored in the `test/generated_images` folder. Each binary image (`.bin` file) corresponds to a folder with the same name that contains the files and directories to be included in the image.
+
+To create a new LittleFS image:
+
+```shell
+littlefs-python create img01 img01.bin --fs-size=2mb --block-size=4096
+```
+
+This command creates a 2MB image file `img01.bin` with 4KB blocks from the contents of the `img01` directory.
+
+The project already includes sample images in `test/generated_images/` that are used by the test fixtures. The folder structure (e.g., `img01/tmp/test_folder/test_file.bin`) is mirrored in the corresponding binary image.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
